@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="image/HF_logo.png">
+    <title>HealthFusion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-container">
+        <div class="top-bar">
+            <div class="logo-name">
+                <img src="image/HF_logo.png" alt="HealthFusion Logo" class="logo">
+                <span class="name">HealthFusion</span>
+            </div>
+            <div class="button-group">
+                <button class="nav-button" id="contactsButton">Contacts us</button>
+                <button class="nav-button" id="aboutUsButton">About Us</button>
+                <button class="join-button" id="joinButton">Join</button>
+                <img src="image/patient.png" alt="Profile Logo" class="profile-logo" id="profileLogo" style="display: none;">
+                <div class="profile-dropdown" id="profileDropdown" style="display: none;">
+                    <p class="profile-name" id="profileName">Deepraj Kushwaha</p>
+                    <p class="profile-email" id="profileEmail">kushwahadeepraj91@gmail.com</p>
+                    <button class="profile-button">Profile</button>
+                    <button class="profile-button">Appointment detail</button>
+                    <button class="profile-button">Notification</button>
+                    <button class="profile-button" id="logoutButton">Logout</button>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrapper">
+            <div class="header-content">
+                <h1><span class="mental-health">Mental health</span><br><span class="is-wealth">is wealth</span></h1>
+                <p class="subtitle">Healthcare helps people maintain good health and prevent illness. Regular check-ups, vaccinations, and screenings can catch health issues early and prevent them from becoming more serious.</p>
+                <button class="book-appointment-button" id="bookAppointmentButton">Book Appointment</button>
+            </div>
+            <div class="images">
+                <img src="image/file.png" alt="Image 1" class="triangle-image">
+            </div>
+        </div>
+    </div>
+    <div class="wave"></div>
+    <div class="bottom-container">
+        <div class="image">
+            <img src="image/file (1).png" alt="Expert Image" width="300px"> 
+        </div>
+        <div class="content">
+            <h1>Meet Our Experts</h1>
+            <p>Problems trying to resolve the conflict between the two major realms of classical physics Newtonian mechanics.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="registrationModal">
+        <div class="modal-content" id="modalContent">
+            <!-- Content will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <div class="modal" id="profileModal">
+        <div class="modal-content" id="profileContent">
+            <span class="close">&times;</span>
+            <h2>Profile</h2>
+            <!-- Profile details will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

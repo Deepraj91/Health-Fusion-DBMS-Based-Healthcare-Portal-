@@ -1,0 +1,362 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.top-container {
+    position: relative;
+    padding: 20px;
+    background-color: #2c4ef9;
+    color: #fff;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+}
+
+.nav-button, .join-button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover, .nav-button:active, .join-button:hover, .join-button:active {
+    background-color: #fff;
+    color: #2c4ef9;
+}
+
+.profile-logo {
+    height: 40px;
+    cursor: pointer;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.header-content {
+    max-width: 50%;
+    margin-left: 100px;
+    text-align: left;
+}
+
+h1 {
+    font-size: 5.5em;
+}
+
+.mental-health {
+    color: #fff;
+}
+
+.is-wealth {
+    color: #17035f;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.images {
+    max-width: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.triangle-image {
+    width: 600px;
+}
+
+.wave {
+    background: #2c4ef9;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wave::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: #fff;
+    clip-path: path('M0,70 M0,70 Q20,10 120,70 T360,70 T480,70 T600,70 T840,70 T960,70 T1080,70 T1200,70 T1250,70 T1300,70 T1440,70 T1560,70 T1700,70 T1860,70 T1900,70 V150 H0 Z');
+    animation: wave-animation 6s linear infinite;
+}
+
+.bottom-container {
+    display: flex;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.bottom-container .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-container .content {
+    flex: 2;
+    padding: 20px;
+}
+
+.bottom-container h1 {
+    color: black;
+    font-size: 5em;
+    margin-bottom: 10px;
+}
+
+.bottom-container p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #2c4ef9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+form button:hover {
+    background-color: #1a39b2;
+}
+
+form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.book-appointment-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #1ab243;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-appointment-button:hover {
+    background-color: #fff;
+    color: #1a39b2;
+}
+
+
+/* Button Container */
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Sign Up Button */
+#signUpButton {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+#signUpButton:hover,
+#signUpButton:focus {
+    background-color: #45a049; /* Darker green */
+}
+
+/* Login Button */
+#loginButton {
+    background-color: #008CBA; /* Blue */
+    color: white;
+}
+
+#loginButton:hover,
+#loginButton:focus {
+    background-color: #007bb5; /* Darker blue */
+}
+
+/* General Button Styling */
+.modal-content button:focus {
+    outline: none;
+}
+
+.modal-content button:active {
+    transform: scale(0.98);
+}
+
+.profile-logo {
+    height: 40px; /* Adjust size as needed */
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.profile-logo:hover {
+    opacity: 0.8; /* Optional: Add hover effect */
+}
+
+#profileContent {
+    text-align: left;
+}
+
+#profileContent h2 {
+    margin-bottom: 10px;
+}
+
+#profileContent p {
+    margin: 5px 0;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 200px; /* Adjust width as needed */
+    z-index: 1000;
+}
+
+.profile-dropdown p {
+    margin: 0 0 10px;
+}
+
+.profile-name {
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+}
+.profile-email{
+    font-size: smaller;
+    color: grey;
+}
+
+.profile-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #2c4ef9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.profile-button:hover {
+    background-color: #1a39b2;
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+}
